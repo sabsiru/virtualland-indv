@@ -13,7 +13,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/f84cdf215e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="resources/css/main.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"/>
     <title>Document</title>
+    <script type="text/javascript">
+        var alert = function (msg, title, type) {
+            swal({
+                title: title,
+                text: msg,
+                icon:"success",
+                type: type,
+                timer: 150,
+                customClass: 'sweet-size',
+                showConfirmButton: false
+            });
+        };
+    </script>
 </head>
 <style>
 .pageNavi{
@@ -39,6 +54,15 @@
 }
 </style>
 <body>
+<script>
+    let msg="${msg}";
+    if (msg=="logout_ok")
+        alert('로그아웃 되었습니다.',"로그아웃","success");
+    if(msg=="login_ok")
+        alert('환영합니다. ${member_id} 님. ',"로그인","success");
+    if(msg=="join_ok")
+        alert('회원가입이 완료되었습니다. 로그인 해주세요.',"회원가입","success");
+</script>
 <%@ include file="include/header.jsp" %>
 <div class="pageNavi">
     <a href="#" style="cursor: pointer"><i class="fa-solid fa-up-long"></i></a>

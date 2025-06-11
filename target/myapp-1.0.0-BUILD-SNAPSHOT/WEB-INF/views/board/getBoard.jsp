@@ -92,7 +92,6 @@
         <div class="btn-container">
             <p>이전글${prevPage.board_num ==null?"이 없습니다":""}<i class="fa-solid fa-caret-down"></i></p>
             <p id="prevBtn" class="btn" style="cursor: pointer"><c:out value="${prevPage.board_title }"/></p>
-            asdfasdfasdfsadfasdf
         </div>
             </c:if>
     </form>
